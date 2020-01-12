@@ -8,36 +8,36 @@
 //------------------------------------------------------------------------------
 public static class GameComponentsLookup {
 
-    public const int InteractDemoMoveComplete = 0;
-    public const int InteractDemoMove = 1;
-    public const int InteractDemoPos = 2;
-    public const int InteractDemoSprite = 3;
-    public const int InteractDemoView = 4;
-    public const int JunMoxiaoLog = 5;
-    public const int MyNamespaceRotation = 6;
+    public const int InteractDemoDir = 0;
+    public const int InteractDemoMoveComplete = 1;
+    public const int InteractDemoMove = 2;
+    public const int InteractDemoPos = 3;
+    public const int InteractDemoSprite = 4;
+    public const int InteractDemoView = 5;
+    public const int JunMoxiaoLog = 6;
     public const int TestInit = 7;
 
     public const int TotalComponents = 8;
 
     public static readonly string[] componentNames = {
+        "InteractDemoDir",
         "InteractDemoMoveComplete",
         "InteractDemoMove",
         "InteractDemoPos",
         "InteractDemoSprite",
         "InteractDemoView",
         "JunMoxiaoLog",
-        "MyNamespaceRotation",
         "TestInit"
     };
 
     public static readonly System.Type[] componentTypes = {
+        typeof(InteractDemo.DirComponent),
         typeof(InteractDemo.MoveCompleteComponent),
         typeof(InteractDemo.MoveComponent),
         typeof(InteractDemo.PosComponent),
         typeof(InteractDemo.SpriteComponent),
         typeof(InteractDemo.ViewComponent),
         typeof(JunMoxiao.LogComponent),
-        typeof(MyNamespace.RotationComponent),
         typeof(TestInit)
     };
 }

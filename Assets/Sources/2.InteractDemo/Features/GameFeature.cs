@@ -12,6 +12,7 @@ namespace InteractDemo
             Add(new PosSystem(contexts));
             Add(new MoveSystem(contexts));
             Add(new DirSystem(contexts));
+            Add(new ChangeRotationSystem(contexts));
         }
     }
 

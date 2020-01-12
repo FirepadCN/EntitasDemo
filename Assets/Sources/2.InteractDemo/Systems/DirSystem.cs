@@ -22,8 +22,13 @@ namespace InteractDemo
                 Vector3 tarPos = gameEntity.interactDemoMove.TargetPos;
                 Vector3 dir = (tarPos - view.position).normalized;
 
-                Quaternion angleOffset=Quaternion.FromToRotation(view.up,dir);
-                view.rotation *= angleOffset;
+                //四元数方式直接操作
+                //Quaternion angleOffset=Quaternion.FromToRotation(view.up,dir);
+                //view.rotation *= angleOffset;
+
+                //普通方法利用RotationSystem控制
+                float angle = Mathf.Atan2(dir.y, dir.x);
+                gameEntity.ReplaceInteractDemoDir(angle);
             }
         }
 
